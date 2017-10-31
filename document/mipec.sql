@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 31, 2017 lúc 11:23 AM
+-- Thời gian đã tạo: Th10 31, 2017 lúc 12:39 PM
 -- Phiên bản máy phục vụ: 10.1.22-MariaDB
 -- Phiên bản PHP: 7.1.4
 
@@ -2039,6 +2039,18 @@ ALTER TABLE `mp_shk_banner`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Chỉ mục cho bảng `mp_shk_invoice`
+--
+ALTER TABLE `mp_shk_invoice`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `mp_shk_invoice_detail`
+--
+ALTER TABLE `mp_shk_invoice_detail`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Chỉ mục cho bảng `mp_shk_payment_method`
 --
 ALTER TABLE `mp_shk_payment_method`
@@ -2142,6 +2154,16 @@ ALTER TABLE `mp_posts`
 --
 ALTER TABLE `mp_shk_banner`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT cho bảng `mp_shk_invoice`
+--
+ALTER TABLE `mp_shk_invoice`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT cho bảng `mp_shk_invoice_detail`
+--
+ALTER TABLE `mp_shk_invoice_detail`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `mp_shk_payment_method`
 --
