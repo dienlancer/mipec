@@ -159,6 +159,11 @@ $inputName 			= $option_name . '[slogan_about]';
 $inputValue 		= @$data['slogan_about'];			
 $slogan_about			= $vHtml->cmsTextbox($inputID,$inputName,"regular-text", $inputValue);
 
+$inputID 			= $option_name . '_ban_do';
+$inputName 			= $option_name . '[ban_do]';
+$inputValue 		= @$data['ban_do'];			
+$ban_do			=$vHtml->cmsTextarea($inputID,$inputName,"widefat",$inputValue,8,120);
+
 ?>
 <div class="wrap">
 	<h1>Setting</h1>
@@ -369,6 +374,12 @@ $slogan_about			= $vHtml->cmsTextbox($inputID,$inputName,"regular-text", $inputV
 							<b><i><label >Slogan About</label></i></b>
 						</th>
 						<td><?php echo $slogan_about;?></td>
+					</tr>
+					<tr>
+						<th scope="row">
+							<b><i><label >Bản đồ</label></i></b>
+						</th>
+						<td><?php echo $ban_do;?></td>
 					</tr>
 				</tbody>			
 			</table>

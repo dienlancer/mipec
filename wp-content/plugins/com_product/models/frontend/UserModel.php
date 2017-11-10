@@ -67,11 +67,13 @@ class UserModel{
 	    $phone=$_POST["phone"];
 	    $mobilephone=$_POST["mobilephone"];
 	    $fax=$_POST["fax"];  
+	    $status=1;
+	    $sort_order=1;
 	    
-		$query = "INSERT INTO {$table} (`username`, `password`,`email`, `fullname`, `address`, `phone`, `mobilephone`, `fax`) VALUES
-(%s,%s,%s,%s,%s,%s,%s,%s)";
+		$query = "INSERT INTO {$table} (`username`, `password`,`email`, `fullname`, `address`, `phone`, `mobilephone`, `fax`,`status`,`sort_order`) VALUES
+(%s,%s,%s,%s,%s,%s,%s,%s,%d,%d)";
 		$info = $wpdb->prepare($query,
-			$username,$password,$email,$fullname,$address,$phone,$mobilephone,$fax
+			$username,$password,$email,$fullname,$address,$phone,$mobilephone,$fax,$status,$sort_order
 			);				
 		$wpdb->query($info);		
 	}

@@ -121,8 +121,8 @@ class AdminProductController{
 		$wpnonce_action = $this->_metabox_id;
 		$thumbnail_id 	= get_post_thumbnail_id($post_id);	
 		$featureImg=wp_get_attachment_image_src($thumbnail_id,"single-post-thumbnail");	
-		$imgThumbnailHelper=$zController->getHelper("ImgThumbnail");	
-		if(!empty($featureImg[0])){						
+		$imgThumbnailHelper=$zController->getHelper("ImgThumbnail");			
+		if(count($featureImg)>0){						
 			$imgThumbnailHelper->resizeImage($featureImg[0],$width,$height);
 		}		
 		if(count($arrParam[$this->create_id('img-url')]) > 0){			

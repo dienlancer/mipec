@@ -1,6 +1,6 @@
 <?php 
 
-	global $zController;
+	global $zController,$zendvn_sp_settings;	
 	
 	$msg = '';
 	if(count($zController->_error)>0){
@@ -138,11 +138,13 @@
 			</thead>
 			<tbody>
 			<?php
+			$width=$zendvn_sp_settings["product_width"];	
+		$height=$zendvn_sp_settings["product_height"];		
 			foreach ($arrInvoiceDetail as $key => $value) {
 				$product_code=$value["product_code"];
 				$product_name=$value["product_name"];
 				$product_image=$value["product_image"];
-				$newFileUrl=wp_upload_dir()["url"] . DS . WIDTH . "x" . HEIGHT . "-" . $product_image; 
+				$newFileUrl=wp_upload_dir()["url"] . DS . $width . "x" . $height . "-" . $product_image; 
 				$product_price=$vHtml->fnPrice(@$value["product_price"]) ;
 				$product_quantity=number_format($value["product_quantity"],0,",",".") ;
 				$product_total_price=$vHtml->fnPrice(@$value["product_total_price"]);

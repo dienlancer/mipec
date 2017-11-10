@@ -5,7 +5,7 @@ if(!class_exists('WP_List_Table')){
 
 class AdminBannerModel extends WP_List_Table{
 
-	private $_per_page = 5;
+	private $_per_page =100;
 	
 	private $_sql;
 	
